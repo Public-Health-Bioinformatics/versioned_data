@@ -39,6 +39,7 @@ The Versioned Data System on Salk manages the retrieval of current and past vers
 
 The Galaxy Versioned Data tool below, shows the interface for retrieving versions of reference database.  The tool lets you select the fasta database to retrieve, and then one or more workflows.  The system then generates and caches the versioned data in the data library; then links it into one's history; then runs the workflow(s) to get the derivative data (a Blast database say) and then caches that back into the data library.  Future requests for that versioned data and derivatives (keyed by workflow id and input data version ids) will return the data already from cache rather than regenerating it, until the cache is deleted.
 
+![galaxy versioned data tool form](https://github.com/Public-Health-Bioinformatics/versioned_data/blob/master/doc/galaxy_tool_form.png)
 
 ## Project goals
 
