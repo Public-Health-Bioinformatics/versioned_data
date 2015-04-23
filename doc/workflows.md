@@ -4,6 +4,8 @@
 
 In order for a workflow to show up in the tool's Workflows menu, **it must be published by its author**. Currently there is no other ability to offer finer-grained access to lists of workflows by individual or user group.  
 
+![Galaxy workflows](workflows.png)
+
 Workflow processing is accomplished on behalf of a user by launching it in a history of the versioneddata@localhost.com user.  Cache clearing will remove these file references from the data library when they are old (but as the files are often moved up to the library's cache they can still be used by others until that cache is cleared.  An admin can impersonate a "versioneddata" user to see the workflows being executed by other users.
 
 Note that any workflow that uses additional input datasets must have those datasets set in the workflow design/template, so they must exist in a fixed location - a data library.  (Currently they can't be in the Versioned Data library). 
