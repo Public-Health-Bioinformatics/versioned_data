@@ -1,12 +1,12 @@
 ## Galaxy Data Library Setup
 
-**Create a Galaxy data library called "Versioned Data" and add folders and "pointer" files that tell galaxy where the data stores are on the server.**
+1. **Create a Galaxy data library called "Versioned Data" and add folders and "pointer" files that tell galaxy where the data stores are on the server.**
+![Galaxy Data Library](galaxy_data_library.png)
+2. Set permissions so the special "versioneddata@localhost.com" user has add/update permissions on the "Versioned Data" library.
 
-1. Set permissions so the special "versioneddata@localhost.com" user has add/update permissions on the "Versioned Data" library.
+3. Then add any folder structure you want under Versioned Data.  Top level folders could be "Bacteria, Virus, Eukaryote", or "NCBI, ... ".  Underlying folders can hold versioned data for particular bacteria / virus databases, e.g. "NCBI nt".
 
-2. Then add any folder structure you want under Versioned Data.  Top level folders could be "Bacteria, Virus, Eukaryote", or "NCBI, ... ".  Underlying folders can hold versioned data for particular bacteria / virus databases, e.g. "NCBI nt".
-
-3. Add a **"pointer.[data store type]"** file (a simple galaxy dataset file) to any folder that you want to activate as a versioned data store.  Any folder that has a "pointer.[data store type]" file in it will be treated as a folder containing versioned content, as illustrated on the right.  These folders (their names) will then be included in the Versioned Data tool's list of data stores. Within these folders, links to caches of retrieved versioned data will be kept (shown as "cached data" items in illustration).  For "folder" and "biomaj" data stores, links will be to permanent files, not cached ones.
+4. Add a **"pointer.[data store type]"** file (a simple galaxy dataset file) to any folder that you want to activate as a versioned data store.  Any folder that has a "pointer.[data store type]" file in it will be treated as a folder containing versioned content, as illustrated on the right.  These folders (their names) will then be included in the Versioned Data tool's list of data stores. Within these folders, links to caches of retrieved versioned data will be kept (shown as "cached data" items in illustration).  For "folder" and "biomaj" data stores, links will be to permanent files, not cached ones.
 
 For example, on galaxy page Shared Data > Data Libraries > Versioned Data, there is a folder/file:
 
@@ -25,6 +25,8 @@ Preferably select the "Link to files without copying into Galaxy" option as well
 Then submit the form; if an error occurs then verify that the pointer file path is correct.
 
 **Note: a folder called "Workflow Cache" is automatically created within the Versioned Data folder to hold cached workflow results as triggered by the Versioned Data tool. No maintenance of this folder is needed.**
+
+![Link pointer file to Versioned Data subfolder](library_dataset_upload.png)
 
 ### Direct use of Data Library Folder
 
