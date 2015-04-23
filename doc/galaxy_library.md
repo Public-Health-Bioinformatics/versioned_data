@@ -1,4 +1,4 @@
-## Galaxy Data Library Setup
+## Galaxy "Versioned Data" Library Setup
 
 1. Create a Galaxy data library called "Versioned Data".  The name is important - it must be located by the Versioned Data tool.
 
