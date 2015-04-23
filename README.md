@@ -1,10 +1,10 @@
-# versioned_data
+# Versioned Data System
 The Galaxy and command line Versioned Data System manages the retrieval of current and past versions of selected reference sequence databases from local data stores.
 
 ---
 
 0. Overview
-1. Setup for Admins
+1. [Setup for Admins][doc/setup.md]
   1. Galaxy tool installation
   2. Server data stores
   3. Data store examples
@@ -25,7 +25,7 @@ The Galaxy and command line Versioned Data System manages the retrieval of curre
 
 ## Overview
 
-This tool can be used on a server both via the command line and via the Galaxy bioinformatics workflow platform using the "Versioned Data" tool.  Different kinds of content are suited to different archiving technologies, so the system providea alternative storage systems based on archival content.
+This tool can be used on a server both via the command line and via the Galaxy bioinformatics workflow platform using the "Versioned Data" tool.  Different kinds of content are suited to different archiving technologies, so the system provides a few  storage system choices.
 
 * Fasta sequences - accession ids, descriptions and their sequences - are suited to storage as 1 line key-value pair records in a key-value store.  Here we introduce a low-tech file-based database plugin for this kind of data called **Kipper**.  It is  suited entirely to the goal of producing complete versioned files.  This covers much of the sequencing archiving problem for reference databases.  Consult https://github.com/Public-Health-Bioinformatics/kipper for up-to-date information on Kipper.
 
