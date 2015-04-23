@@ -1,9 +1,7 @@
 # versioned_data
-The Versioned Data System manages the retrieval of current and past versions of selected reference sequence databases from a local data store.
+The Galaxy and command line Versioned Data System manages the retrieval of current and past versions of selected reference sequence databases from local data stores.
 
 ---
-
-Versioned Data System
 
 0. Overview
 1. Setup for Admins
@@ -27,11 +25,11 @@ Versioned Data System
 
 ## Overview
 
-The Versioned Data System on Salk manages the retrieval of current and past versions of selected reference sequence databases.  This tool can be used on Salk both via the command line and via the galaxy platform using the BCCDC "Versioned Data" tool.  Different kinds of content are suited to different archiving technologies, so the system providea alternative storage systems based on archival content.
+This tool can be used on a server both via the command line and via the Galaxy bioinformatics workflow platform using the "Versioned Data" tool.  Different kinds of content are suited to different archiving technologies, so the system providea alternative storage systems based on archival content.
 
 * Fasta sequences - accession ids, descriptions and their sequences - are suited to storage as 1 line key-value pair records in a key-value store.  Here we introduce a low-tech file-based database plugin for this kind of data called **Kipper**.  It is  suited entirely to the goal of producing complete versioned files.  This covers much of the sequencing archiving problem for reference databases.  Consult https://github.com/Public-Health-Bioinformatics/kipper for up-to-date information on Kipper.
 
-* A git archiving system plugin is also provided for software file tree archiving, with a particular file differential (diff) compression benefit for documents that have sentence-like lines added and deleted between versions.  Git's diff file processing does not perform reliably for long fasta sequence files or files whose contents are re-ordered between versions.  Git's diff functionality can be turned off so that each document is simply stored as a gzip style compressed file.
+* A **git** archiving system plugin is also provided for software file tree archiving, with a particular file differential (diff) compression benefit for documents that have sentence-like lines added and deleted between versions.  
 
 * Super-large files that are not suited to Kipper or git can be handled by a simple "**folder**" data store holds each version of file(s) in a separate compressed archive.
 
