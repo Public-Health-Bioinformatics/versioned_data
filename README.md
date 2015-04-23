@@ -1,37 +1,35 @@
-# versioned_data
-The Versioned Data System manages the retrieval of current and past versions of selected reference sequence databases from a local data store.
+# Versioned Data System
+The Galaxy and command line Versioned Data System manages the retrieval of current and past versions of selected reference sequence databases from local data stores.
 
 ---
 
-Versioned Data System
-
 0. Overview
-1. Setup for Admins
-  1. Galaxy tool installation
-  2. Server data stores
-  3. Data store examples
-  4. Galaxy "Versioned Data" library setup
-  5. Workflow configuration
-  6. Permissions, security, and maintenance
-  7. Problem solving
-2. Using the Galaxy Versioned data tool
-3. System Design
-4. Background Research
-5. Server data store and galaxy library organization
-6. Git Data Store
-7. Caching System
-8. Future Development
-9. Python utilities
+1. [Setup for Admins](doc/setup.md)
+  1. [Galaxy tool installation](doc/galaxy_tool_install.md)
+  2. [Server data stores](doc/data_stores.md)
+  3. [Data store examples](doc/data_store_examples.md)
+  4. [Galaxy "Versioned Data" library setup](doc/galaxy_library.md)
+  5. [Workflow configuration](doc/workflows.md)
+  6. [Permissions, security, and maintenance](doc/maintenance.md)
+  7. [Problem solving](doc/problem_solving.md)
+2. [Using the Galaxy Versioned data tool](doc/galaxy_tool.md)
+3. [System Design](doc/design.md)
+4. [Background Research](doc/background.md)
+5. [Server data store and galaxy library organization](doc/data_store_org.md)
+6. [Git Data Store](doc/git.md)
+7. [Caching System](doc/caching.md)
+8. [Future Development](doc/future.md)
+9. [Python utilities](doc/utilities.md)
 
 ---
 
 ## Overview
 
-The Versioned Data System on Salk manages the retrieval of current and past versions of selected reference sequence databases.  This tool can be used on Salk both via the command line and via the galaxy platform using the BCCDC "Versioned Data" tool.  Different kinds of content are suited to different archiving technologies, so the system providea alternative storage systems based on archival content.
+This tool can be used on a server both via the command line and via the Galaxy bioinformatics workflow platform using the "Versioned Data" tool.  Different kinds of content are suited to different archiving technologies, so the system provides a few  storage system choices.
 
 * Fasta sequences - accession ids, descriptions and their sequences - are suited to storage as 1 line key-value pair records in a key-value store.  Here we introduce a low-tech file-based database plugin for this kind of data called **Kipper**.  It is  suited entirely to the goal of producing complete versioned files.  This covers much of the sequencing archiving problem for reference databases.  Consult https://github.com/Public-Health-Bioinformatics/kipper for up-to-date information on Kipper.
 
-* A git archiving system plugin is also provided for software file tree archiving, with a particular file differential (diff) compression benefit for documents that have sentence-like lines added and deleted between versions.  Git's diff file processing does not perform reliably for long fasta sequence files or files whose contents are re-ordered between versions.  Git's diff functionality can be turned off so that each document is simply stored as a gzip style compressed file.
+* A **git** archiving system plugin is also provided for software file tree archiving, with a particular file differential (diff) compression benefit for documents that have sentence-like lines added and deleted between versions.  
 
 * Super-large files that are not suited to Kipper or git can be handled by a simple "**folder**" data store holds each version of file(s) in a separate compressed archive.
 
@@ -39,6 +37,7 @@ The Versioned Data System on Salk manages the retrieval of current and past vers
 
 The Galaxy Versioned Data tool below, shows the interface for retrieving versions of reference database.  The tool lets you select the fasta database to retrieve, and then one or more workflows.  The system then generates and caches the versioned data in the data library; then links it into one's history; then runs the workflow(s) to get the derivative data (a Blast database say) and then caches that back into the data library.  Future requests for that versioned data and derivatives (keyed by workflow id and input data version ids) will return the data already from cache rather than regenerating it, until the cache is deleted.
 
+![galaxy versioned data tool form](https://github.com/Public-Health-Bioinformatics/versioned_data/blob/master/doc/galaxy_tool_form.png)
 
 ## Project goals
 
