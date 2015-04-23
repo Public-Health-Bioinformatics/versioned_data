@@ -1,6 +1,6 @@
 ## Documentation Index
-
-
+0. [Overview](../README.md)
+1. [Setup for Admins](setup.md)
   1. [Galaxy tool installation](galaxy_tool_install.md)
   2. [Server data stores](data_stores.md)
   3. [Data store examples](data_store_examples.md)
@@ -8,4 +8,11 @@
   5. [Workflow configuration](workflows.md)
   6. [Permissions, security, and maintenance](maintenance.md)
   7. [Problem solving](problem_solving.md)
-  
+2. [Using the Galaxy Versioned data tool](galaxy_tool.md)
+3. [System Design](desing.md)
+4. [Background Research](background.md)
+5. [Server data store and galaxy library organization](data_store_org.md)
+6. [Git Data Store](git.md)
+7. [Caching System](caching.md)
+8. [Future Development](future.md)
+9. [Python utilities](utilities.md)
