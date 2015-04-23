@@ -4,22 +4,22 @@ The Galaxy and command line Versioned Data System manages the retrieval of curre
 ---
 
 0. Overview
-1. [Setup for Admins][doc/setup.md]
-  1. Galaxy tool installation
-  2. Server data stores
-  3. Data store examples
-  4. Galaxy "Versioned Data" library setup
-  5. Workflow configuration
-  6. Permissions, security, and maintenance
-  7. Problem solving
-2. Using the Galaxy Versioned data tool
-3. System Design
-4. Background Research
-5. Server data store and galaxy library organization
-6. Git Data Store
-7. Caching System
-8. Future Development
-9. Python utilities
+1. [Setup for Admins](doc/setup.md)
+  1. [Galaxy tool installation](doc/galaxy_tool_install.md)
+  2. [Server data stores](doc/data_stores.md)
+  3. [Data store examples](doc/data_store_examples.md)
+  4. [Galaxy "Versioned Data" library setup](doc/galaxy_library.md)
+  5. [Workflow configuration](doc/workflows.md)
+  6. [Permissions, security, and maintenance](doc/maintenance.md)
+  7. [Problem solving](doc/problem_solving.md)
+2. [Using the Galaxy Versioned data tool](doc/galaxy_tool.md)
+3. [System Design](desing.md)
+4. [Background Research](background.md)
+5. [Server data store and galaxy library organization](doc/data_store_org.md)
+6. [Git Data Store](doc/git.md)
+7. [Caching System](doc/caching.md)
+8. [Future Development](doc/future.md)
+9. [Python utilities](doc/utilities.md)
 
 ---
 
