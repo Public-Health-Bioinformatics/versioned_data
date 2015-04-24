@@ -10,4 +10,4 @@ If a server data store version folder is deleted, the galaxy data library and us
 
 ![message when selected dataset file no longer exists on the server](bad_history_item.png)
 
-In the example to the right, clicking on the view (eye) icon for "155:16s_rdp.fasta" triggered this message.  To remedy the situation, the user simply reruns the "154: Versioned Data Retrieval" step below to regenerate the dataset(s).
+In the example above, clicking on the view (eye) icon for "155:16s_rdp.fasta" triggered this message.  To remedy the situation, the user simply reruns the "154: Versioned Data Retrieval" step below to regenerate the dataset(s).
