@@ -11,7 +11,5 @@
 3. [System Design](desing.md)
 4. [Background Research](background.md)
 5. [Server data store and galaxy library organization](data_store_org.md)
-6. [Git Data Store](git.md)
 7. [Caching System](caching.md)
-8. [Future Development](future.md)
-9. [Python utilities](utilities.md)
+
