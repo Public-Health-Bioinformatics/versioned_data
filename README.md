@@ -16,10 +16,8 @@ The Galaxy and command line Versioned Data System manages the retrieval of curre
 3. [System Design](doc/design.md)
 4. [Background Research](doc/background.md)
 5. [Server data store and galaxy library organization](doc/data_store_org.md)
-6. [Git Data Store](doc/git.md)
+6. [Data Provenance and Reproducibility](doc/data_provenance.md)
 7. [Caching System](doc/caching.md)
-8. [Future Development](doc/future.md)
-9. [Python utilities](doc/utilities.md)
 
 ---
 
