@@ -11,6 +11,6 @@
 3. [System Design](design.md)
 4. [Background Research](background.md)
 5. [Server data store and galaxy library organization](data_store_org.md)
-6. [Data Provenance and Reproducibility](doc/data_provenance.md)
+6. [Data Provenance and Reproducibility](data_provenance.md)
 7. [Caching System](caching.md)
 
