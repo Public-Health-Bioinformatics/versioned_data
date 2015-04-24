@@ -8,8 +8,9 @@
   6. [Permissions, security, and maintenance](maintenance.md)
   7. [Problem solving](problem_solving.md)
 2. [Using the Galaxy Versioned data tool](galaxy_tool.md)
-3. [System Design](desing.md)
+3. [System Design](design.md)
 4. [Background Research](background.md)
 5. [Server data store and galaxy library organization](data_store_org.md)
+6. [Data Provenance and Reproducibility](doc/data_provenance.md)
 7. [Caching System](caching.md)
 
