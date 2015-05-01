@@ -91,6 +91,6 @@ Once your tag is defined it will be listed in Galaxy as a version
 
 ### Biomaj data store example
 
-In this scenario the data we want versioned access to is sitting directly in the /flat/ folder of a Biomaj databank.  Each version is a separate file that Biomaj manages.  Biomaj can be set to keep all old versions alongside any new one it downloads, or it can limit the total # of versions to a fixed number (this limits experimental reproducibility).
+In this scenario the data we want versioned access to is sitting directly in the /flat/ folder of a Biomaj databank.  Each version is a separate file that Biomaj manages.  Biomaj can be set to keep all old versions alongside any new one it downloads, or it can limit the total # of versions to a fixed number (with the oldest removed when the newest arrives).
 
 *coming soon...*
