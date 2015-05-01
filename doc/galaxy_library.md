@@ -8,7 +8,7 @@
 
 3. Then add any folder structure you want under Versioned Data.  Top level folders could be "Bacteria, Virus, Eukaryote", or "NCBI, ... ".  Underlying folders can hold versioned data for particular bacteria / virus databases, e.g. "NCBI nt".
 
-4. Connect a **"pointer.[data store type]"** file (a simple text file) to any folder that you want to activate as a versioned data store.  Any folder that has a "pointer.[data store type]" file in it will be treated as a folder containing versioned content, as illustrated above.  These folders (their names) will then be included in the Versioned Data tool's list of data stores. Within these folders, links to caches of retrieved versioned data will be kept (shown as "cached data" items in illustration).  For "folder" and "biomaj" data stores, links will be to permanent files, not cached ones.
+4. Connect a **"pointer.[data store type]"** file (a simple text file) to any folder on your server that you want to activate as a versioned data store.  Any folder that has a "pointer.[data store type]" file in it will be treated as a folder containing versioned content, as illustrated above.  These folders will then be listed (by name) in the Versioned Data tool's list of data stores. Within these folders, links to caches of retrieved versioned data will be kept (shown as "cached data" items in illustration).  For "folder" and "biomaj" data stores, links will be to permanent files, not cached ones.
 
 For example, on Galaxy page Shared Data > Data Libraries > Versioned Data, there is a folder/file:
 
