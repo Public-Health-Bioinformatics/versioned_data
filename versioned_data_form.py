@@ -21,8 +21,9 @@ def vdb_init_tool_user(trans):
 	Note that this is how self.api_url gets back into form, for passage back to 2nd call via versioned_data.py
 	self.api_key is passed via secure <configfile> construct. 
 	ALSO: squeezing history_id in this way since no other way to pass it.
-	"trans" is provided only by tool form presentation via <code file="..."> 
-	 See galaxy source code at https://galaxy-dist.readthedocs.org/en/latest/_modules/galaxy/web/framework.html, 
+	"trans" is provided only by tool form presentation via <code file="...">
+	BUT NOW SEE John Chilton's: https://gist.github.com/jmchilton/27c5bb05e155a611294d
+  	 See galaxy source code at https://galaxy-dist.readthedocs.org/en/latest/_modules/galaxy/web/framework.html, 
 	 See http://dev.list.galaxyproject.org/error-using-get-user-id-in-xml-file-in-new-Galaxy-td4665274.html
 	 See http://dev.list.galaxyproject.org/hg-galaxy-2780-Real-Job-tm-support-for-the-library-upload-to-td4133384.html
 	 master api key, set in galaxy config: #self.master_api_key = trans.app.config.master_api_key

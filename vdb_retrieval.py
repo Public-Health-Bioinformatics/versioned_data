@@ -63,7 +63,6 @@ class VDBRetrieval(object):
 
 		self.user_api_key = None	
 		self.user_api = None
-		#self.master_api_key = None
 		self.admin_api_key = None
 		self.admin_api = None
 		self.api_url = None
@@ -186,15 +185,14 @@ class VDBRetrieval(object):
 			if user['is_admin'] == False:
 				print "Unable to establish the admin api: you need to be in the admin_user=... list in galaxy config."
 				sys.exit(1)
-
+			""" Future: will master API be able to do...
 			#if not self.master_api_key:
 			#	print "Unable to establish the admin api: no existing path to config file, and no master_api_key." + self.master_api_key
 			#	sys.exit(1)
-
 			# Generate from scratch:
 			#master_api = GalaxyInstance(url=self.api_url, key=self.master_api_key)
-			
 			#users = master_api.users.get_users(deleted=False)
+			"""
 			users = self.user_api.users.get_users(deleted=False)
 			for user in users:
 
@@ -240,7 +238,7 @@ class VDBRetrieval(object):
 			import data_stores.vdb_folder
 			return data_stores.vdb_folder.VDBFolderDataStore(self, spec_file_id)
 
-		# ****************** FILE FOLDER ******************	
+		# ****************** BIOMAJ FOLDER ******************	
 		elif type == "biomaj":
 			import data_stores.vdb_biomaj
 			return data_stores.vdb_biomaj.VDBBiomajDataStore(self, spec_file_id)

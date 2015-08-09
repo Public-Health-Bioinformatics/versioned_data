@@ -67,8 +67,7 @@ class ReportEngine(object):
 				else:
 					version_id = ''
 			
-			# Reestablishes file(s) if they don't exist on disk.  
-			# This should reestablish Data Library links to it as well.
+			# Reestablishes file(s) if they don't exist on disk. Do data library links to it as well.
 			ds_obj.get_version(version_id)
 			if ds_obj.version_path == None:
 			
@@ -103,9 +102,7 @@ class ReportEngine(object):
 		
 		result=retrievals
 		
-		# As I recall, some output to output file is needed.  
-		# Otherwise galaxy doesn't generate a placeholder file name for the output, and so we can't do things like check for [placeholder name]_files folder.
-		# Add something to report on?
+		# Output file needs to exist.  Otherwise Galaxy doesn't generate a placeholder file name for the output, and so we can't do things like check for [placeholder name]_files folder.  Add something to report on?
 		with open(options.output,'w') as fw:
 			fw.writelines(result)
 
@@ -129,7 +126,6 @@ class ReportEngine(object):
 		parser.add_option('-O', '--output_id', type='string', dest='output_id', 
 			help='Output identifier')
 			
-		# Not currently used:
 		parser.add_option('-d', '--date', type='string', dest='globalRetrievalDate', 
 			help='Provide date/time for data recall.  Defaults to now.')
 		

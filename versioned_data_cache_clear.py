@@ -95,21 +95,11 @@ for item in library_dataset_deletes:
 	retrieval_obj.admin_api.libraries.delete_library_dataset(retrieval_obj.library_id, item['id'], purged=True)
 
 
-# NEED Bioblend API WAY TO DELETE GALAXY LIBRARY FOLDERS!!!!!!!!!!!!!!!!!!!
+# Newer Bioblend API method for deleting galaxy library folders.  
+# OLD Galaxy way possible: http DELETE request to {{url}}/api/folders/{{encoded_folder_id}}?key={{key}}
 if 'folders' in dir(retrieval_obj.admin_api):
 	for folder in library_folder_deletes:
 		retrieval_obj.admin_api.folders.delete(folder['id'])
-
-"""	  
-
-Galaxy next_stable has new API item:
-
-for delete you send http DELETE request to {{url}}/api/folders/{{encoded_folder_id}}?key={{key}}
-
-On Mon Jan 12 2015 at 3:01:56 PM Dooley, Damion <Damion.Dooley@bccdc.ca> wrote:
-Hi Martin - Following up on this - I think your API folder delete commit is : https://bitbucket.org/galaxy/galaxy-central/commits/8f76a6abc5d7d5c98b6c148c4cfe75cc1c159e90  
-
-"""
 
 
 print workflow_keepers
